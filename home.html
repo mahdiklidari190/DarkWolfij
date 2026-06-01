@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Darkwolf Agency | Premium AI Automation & Digital Marketing Services</title>
+    <meta name="description" content="Accelerate your business growth with Darkwolf Agency. We specialize in AI automation, elite branding, SEO, and web development. Guaranteed results and more customers.">
+    <meta name="keywords" content="AI Automation, Digital Marketing, SEO Optimization, Web Development, Branding, Darkwolf Agency">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://darkwolfagency.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://darkwolfagency.com/">
+    <meta property="og:title" content="Darkwolf Agency | Premium Digital Services">
+    <meta property="og:description" content="Accelerate your business growth with Darkwolf Agency. We specialize in AI automation, elite branding, SEO, and web development.">
+    <meta property="og:image" content="https://darkwolfagency.com/wp-content/uploads/2025/07/image-7__1_-removebg-preview-e1766882018379.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://darkwolfagency.com/">
+    <meta property="twitter:title" content="Darkwolf Agency | Premium Digital Services">
+    <meta property="twitter:description" content="Accelerate your business growth with Darkwolf Agency. Guaranteed results and more customers.">
+    <meta property="twitter:image" content="https://darkwolfagency.com/wp-content/uploads/2025/07/image-7__1_-removebg-preview-e1766882018379.webp">
+
+    <link rel="icon" href="https://darkwolfagency.com/wp-content/uploads/2025/07/image-7__1_-removebg-preview-e1766882018379.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+
+       html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* این دو خط برای جلوگیری از هرگونه اسکرول افقی ناخواسته ضروری هستند */
+    overflow-x: hidden; 
+    position: relative;
+}
+
+        /* === RESET & BASE === */
+        *, *::before, *::after { 
+            box-sizing: border-box; margin: 0; padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            background: var(--bg); 
+            color: var(--text); 
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Inter', 'Segoe UI', 'Vazirmatn', sans-serif , system-ui, sans-serif;
+            background: #111111;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+
+        .container { 
+            max-width: 1400px; 
+            margin: auto; 
+            padding: 0 var(--gap); 
+            width: 100%;
+        }
+        .section { 
+            padding: clamp(40px, 6vh, 80px) 0; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+  
+        .eyebrow { 
+            font-size: clamp(14px, 2vw, 18px); 
+            font-weight: 800; 
+            text-align: center;
+            margin-bottom: clamp(24px, 4vh, 48px);
+            background: linear-gradient(90deg, #aaa, #fff, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
+        }
+
+        /* Swiper & Box Layout */
+.swiper { 
+    width: 100%;
+    padding-bottom: 20px;
+    /* تغییر از visible به hidden برای جلوگیری از اسکرول افقی */
+    overflow: hidden; 
+}
+
+.swiper-slide { 
+    background: var(--surface); 
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden; /* اضافه شده برای اطمینان */
+    position: relative;
+    height: clamp(460px, 68vh, 720px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transform: scale(0.92);
+    opacity: 0.4;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* برای جلوگیری از بیرون‌زدگی کارت‌های مقیاس‌بندی شده */
+    will-change: transform; 
+}
+  
+        .swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+        }
+
+        /* Media Background */
+        .media { position: absolute; inset: 0; z-index: 1; background: #000; }
+        .media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s; }
+        .media img.hidden { opacity: 0; pointer-events: none; }
+
+        /* Play Button */
+        .play-btn { 
+            position: absolute; top: 50%; left: 50%; translate: -50% -50%; z-index: 20; 
+            width: clamp(56px, 7vw, 80px); height: clamp(56px, 7vw, 80px); border-radius: 50%; 
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.3); cursor: pointer; display: grid; place-items: center; 
+            transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .play-btn:hover { background: rgba(255,255,255,0.25); transform: scale(1.05); }
+        .play-btn::after { content: ""; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 16px solid #fff; translate: -2px; }
+  
+        @media(max-width: 500px) {
+            .play-btn::after { border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 13px solid #fff; }
+        }
+        .play-btn.playing { opacity: 0; pointer-events: none; }
+  
+        /* Text Overlay */
+        .slide-body { 
+            position: absolute; bottom: 0; left: 0; right: 0; z-index: 10; 
+            padding: clamp(60px, 10vh, 120px) clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px);
+            background: linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+            display: flex; flex-direction: column; gap: 8px;
+        }
+  
+        .slide-title { font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        .slide-desc { color: var(--muted); font-size: clamp(14px, 1.5vw, 16px); max-width: 640px; transition: max-height 0.5s ease; overflow: hidden; }
+        .slide-desc.collapsed { max-height: 48px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  
+        .more-btn { 
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); 
+            color: var(--text); padding: 6px 16px; border-radius: 20px; font-family: inherit; font-size: clamp(12px, 1.2vw, 14px); 
+            cursor: pointer; margin-top: 8px; transition: all 0.3s; align-self: flex-start; backdrop-filter: blur(4px);
+        }
+        .more-btn:hover { background: rgba(255,255,255,0.2); }
+
+        /* Specs Section - Fluid Grid */
+        .specs-slide { background: radial-gradient(circle at top right, #141424, #050505); }
+        .specs { 
+            padding: clamp(24px, 5vh, 48px) clamp(20px, 4vw, 40px); 
+            display: flex; flex-direction: column; justify-content: center;
+            gap: clamp(16px, 3vh, 28px); width: 100%; height: 100%; overflow-y: auto;
+            scrollbar-width: none;
+        }
+        .specs::-webkit-scrollbar { display: none; }
+  
+        .spec-group { border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: clamp(10px, 2vh, 20px); }
+        .spec-group:last-child { border: none; padding: 0; }
+        .spec-label { font-size: clamp(11px, 1.2vw, 13px); font-weight: 700; color: var(--muted); letter-spacing: 0.05em; margin-bottom: clamp(8px, 1.5vh, 14px); text-transform: uppercase; }
+  
+        .spec-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(12px, 2vw, 24px); }
+        .spec-row-3 { grid-template-columns: repeat(3, 1fr); }
+  
+        @media (max-width: 380px) {
+            .spec-row-3 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .spec-item { display: flex; flex-direction: column; gap: 2px; }
+        .spec-value { font-size: clamp(20px, 3vw, 34px); font-weight: 800; background: linear-gradient(135deg, #fff 30%, #999 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; }
+        .spec-unit { font-size: clamp(12px, 1.3vw, 16px); font-weight: 600; color: var(--muted); margin-right: 2px; }
+        .spec-desc { font-size: clamp(11px, 1.2vw, 13px); color: rgba(255,255,255,0.5); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+        /* Dynamic Pagination Bar */
+        .pagination { display: flex; justify-content: center; gap: 8px; margin-top: clamp(20px, 4vh, 40px); list-style: none; padding: 0; }
+        .pagination button { 
+            width: clamp(40px, 6vw, 60px); height: 5px; border-radius: 4px; background: rgba(255,255,255,0.15); 
+            border: none; cursor: pointer; position: relative; overflow: hidden; transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .pagination li.active button { width: clamp(65px, 9vw, 90px); }
+        .pagination button::after { 
+            content: ""; position: absolute; top: 0; bottom: 0; right: 0; 
+            background: var(--accent); border-radius: inherit; width: var(--progress, 0%);
+        }
+
+        @media(min-width: 1400px) {
+            .swiper-slide { height: 650px; }
+        }
+  
+        @media (max-height: 520px) and (orientation: landscape) {
+            .section { padding: 20px 0; }
+            .swiper-slide { height: 320px; min-height: auto; }
+            .slide-body { padding-top: 40px; }
+            .play-btn { width: 48px; height: 48px; }
+            .specs { gap: 8px; }
+            .spec-label { margin-bottom: 4px; }
+        }
+         
+        /* === VARIABLES (Modern Silver Palette) === */
+        :root {
+            --silver: #E2E8F0;
+            --silver-light: #F8FAFC;
+            --silver-dark: #94A3B8;
+            --silver-glow: rgba(226, 232, 240, 0.5);
+            --silver-accent: #dbe4f0;
+            --dark-bg: #111111;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --glass-bg: rgba(20, 20, 20, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --bg: #050505;
+            --surface: #121212;
+            --text: #ffffff;
+            --muted: rgba(255, 255, 255, 0.65);
+            --accent: #ffffff;
+            --radius: clamp(20px, 3vw, 32px);
+            --gap: 24px;
+        }
+
+       
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* === HERO SECTION === */
+        .hero-section {
+            position: relative; min-height: 95vh;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute; inset: 0; z-index: 0;
+            object-fit: cover; width: 100%; height: 100%;
+            opacity: 0.8;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #11111100 100%); z-index: 1;
+        }
+        .hero-content {
+            position: relative; z-index: 2;
+            text-align: center; padding: 40px 20px;
+        }
+
+        /* === TYPOGRAPHY === */
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 8vw, 90px);
+            color: var(--silver); letter-spacing: 4px;
+            line-height: 0.95; margin-bottom: 10px;
+            font-weight: 700; text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(226, 232, 240, 0.3);
+        }
+        .commitment-large, .commitment-medium, .commitment-small {
+            font-family: 'Playfair Display', serif;
+            color: #fff; line-height: 1.1; letter-spacing: 2px;
+        }
+        .commitment-large { font-size: clamp(35px, 7vw, 80px); }
+        .commitment-medium { font-size: clamp(28px, 5vw, 65px); color: var(--silver-accent); }
+        .commitment-small { font-size: clamp(20px, 3vw, 40px); display: block; margin-top: 10px; font-weight: 300;}
+        
+        .section-heading {
+            font-size: clamp(24px, 4vw, 32px);
+            text-align: center; line-height: 1.3;
+            margin-bottom: 40px; font-weight: 700;
+        }
+        .section-heading .silver { color: var(--silver); text-shadow: 0 0 10px rgba(226, 232, 240, 0.2); }
+        .section-heading .white { color: #fff; }
+
+       /* === BUTTONS === */
+        .btn-primary {
+            display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+            background: linear-gradient(135deg, #f8fafc, #cbd5e1); color: #000;
+            padding: 16px 36px; border-radius: 25px;
+            font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            border: none; cursor: pointer;
+            box-shadow: 0 0px 50px rgba(226, 232, 240, 0.2);
+            min-height: 48px;
+            min-width: 48px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(226, 232, 240, 0.5);
+        }
+        .btn-primary svg { width: 20px; height: 20px; }
+
+        /* === NEW CHIC CARDS STYLE === */
+        .cards-container {
+            display: flex; flex-wrap: wrap; gap: 30px;
+            justify-content: center; perspective: 1500px;
+            max-width: 1100px; margin: 0 auto;
+        }
+
+        .info-card {
+            flex: 1 1 300px; max-width: 340px;
+            padding: 40px 30px; 
+            background: linear-gradient(165deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transform-style: preserve-3d;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative; overflow: hidden;
+        }
+
+        .info-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            opacity: 0; transition: opacity 0.5s;
+        }
+
+        .info-card:hover {
+            transform: translateZ(20px) scale(1.02);
+            border-color: rgba(226, 232, 240, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+        }
+
+        .info-card:hover::before { opacity: 1; }
+
+        .card-icon {
+            font-size: 40px; margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-card:hover .card-icon { transform: translateY(-5px); }
+
+        .card-title {
+            color: #fff; font-size: 22px;
+            margin-bottom: 20px; font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .card-text { 
+            color: #a0a0a0; font-size: 15px; 
+            line-height: 1.7; font-weight: 300;
+        }
+
+        .card-icon svg {
+            width: 40px; height: 40px;
+            stroke: var(--silver);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:active {
+           transform: scale(0.96) !important;
+         }
+
+        .info-card.selected {
+          border-color: var(--silver);
+          background: rgba(255, 255, 255, 0.08);
+          box-shadow: 0 0 30px rgba(226, 232, 240, 0.2);
+         }
+
+        .info-card.selected .card-icon svg {
+          stroke: #fff;
+          transform: scale(1.1);
+         }
+
+        /* === SERVICES GRID === */
+        .services-section { padding: 80px 20px; }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; max-width: 1200px; margin: 0 auto;
+        }
+        .service-card {
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            border-radius: 20px; padding: 35px 30px;
+            transition: all 0.4s ease;
+        }
+        .service-card:hover {
+            background: rgba(40, 40, 40, 0.6); transform: translateY(-8px);
+            border-color: rgba(226, 232, 240, 0.4);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .service-header {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; margin-bottom: 25px;
+        }
+        .service-icon svg { width: 50px; height: 50px; stroke: var(--silver); fill: none; filter: drop-shadow(0 0 5px var(--silver-glow)); }
+        .service-arrow {
+            width: 40px; height: 40px; background: rgba(226, 232, 240, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s;
+        }
+        .service-arrow:hover { background: var(--silver); box-shadow: 0 0 15px var(--silver-glow); }
+        .service-arrow svg { width: 18px; height: 18px; fill: var(--silver); transition: fill 0.3s; }
+        .service-arrow:hover svg { fill: #000; }
+        .service-title { font-size: 24px; color: var(--silver); margin-bottom: 15px; font-weight: 700; }
+        .service-desc { font-size: 15px; color: #a3a3a3; line-height: 1.7; }
+
+        /* === MISSION CARDS === */
+        .mission-section { padding: 80px 20px; }
+        .mission-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px; max-width: 1100px; margin: 0 auto;
+        }
+        .mission-card {
+            background: var(--glass-bg); border-radius: 20px; overflow: hidden;
+            border: 1px solid var(--glass-border); transition: transform 0.4s ease;
+        }
+        .mission-card:hover { transform: translateY(-8px); border-color: rgba(226,232,240,0.3); }
+        .mission-img-wrap { position: relative; overflow: hidden; }
+        .mission-img-wrap img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 0.6s; filter: grayscale(20%); }
+        .mission-card:hover .mission-img-wrap img { transform: scale(1.08); filter: grayscale(0%); }
+        .mission-icon {
+            position: absolute; bottom: 5px; right: 5px;
+            width: 50px; height: 50px; background: #000;
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            border: 1px solid rgba(226,232,240,0.4); box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .mission-icon svg { width: 24px; height: 24px; stroke: var(--silver); }
+        .mission-content { padding: 40px 25px 30px; }
+        .mission-title { font-size: 20px; color: var(--silver); margin-bottom: 12px; font-weight: 700; letter-spacing: 1px; }
+        .mission-text { font-size: 14px; color: #ecf9ff; line-height: 1.7; }
+
+       /* Infinite Marquee Galleries */
+.gallery-section { padding: 40px 0; overflow: hidden; width: 100%; background: #0a0a0a; }
+
+.scroller {
+    /* تغییر از 100vw به 100% برای جلوگیری از بیرون‌زدگی */
+    max-width: 100%; 
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+    mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+}
+        .scroller__inner {
+            display: flex; width: max-content; gap: 30px; padding-block: 20px;
+            animation: scroll 30s linear infinite;
+        }
+        .scroller[data-direction="right"] .scroller__inner { animation-direction: reverse; }
+        
+        @keyframes scroll { to { transform: translate(calc(-50% - 15px)); } }
+        
+        .gallery-item {
+            background: var(--card-bg); border-radius: 16px; padding: 25px;
+            display: flex; align-items: center; justify-content: center;
+            width: 200px; height: 200px; border: 1px solid var(--glass-border);
+            transition: all 0.4s; flex-shrink: 0;
+        }
+        .gallery-item:hover { background: rgba(255,255,255,0.08); border-color: var(--silver-dark); transform: scale(1.05); }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: contain;
+            filter: grayscale(100%) brightness(0.8); transition: filter 0.4s;
+        }
+        .gallery-item:hover img { filter: grayscale(0%) brightness(1); }
+
+        /* === TESTIMONIALS === */
+        .testimonials-section { padding: 80px 20px; overflow: hidden; }
+        .reviews-wrapper {
+            max-width: 100%;
+            width: 1280px; margin: 0 auto; background: var(--glass-bg);
+            border-radius: 24px; padding: 40px 20px;
+            border: 1px solid var(--glass-border); backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        /* === LATEST NEWS (Glassmorphism Redesign) === */
+        .news-section { padding: 80px 20px; text-align: center; }
+        .news-glass-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        .news-glass-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(226, 232, 240, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .news-subtitle { font-family: 'Inter', sans-serif; font-size: 14px; letter-spacing: 3px; color: var(--silver-dark); text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .news-title { font-size: clamp(28px, 5vw, 42px); line-height: 1.2; margin-bottom: 25px; font-weight: 700; }
+        .news-desc { font-size: 16px; color: #a3a3a3; line-height: 1.8; max-width: 700px; margin: 0 auto; }
+
+        /* === FAQ SECTION === */
+        .faq-section { padding: 80px 20px; max-width: 900px; margin: 0 auto; }
+        .faq-item {
+            background: var(--card-bg); border: 1px solid var(--glass-border);
+            border-radius: 12px; margin-bottom: 15px; overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-question {
+            width: 100%; text-align: left; padding: 20px 25px;
+            background: transparent; border: none; color: #fff;
+            font-size: 16px; font-weight: 600; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .faq-icon {
+            color: var(--silver); font-size: 24px; transition: transform 0.3s;
+        }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out;
+            background: rgba(0,0,0,0.2);
+        }
+        .faq-answer p { padding: 0 25px 25px; color: #a3a3a3; line-height: 1.7; font-size: 15px; }
+        .faq-item.active { border-color: rgba(226, 232, 240, 0.3); background: rgba(255,255,255,0.06); }
+        .faq-item.active .faq-icon { transform: rotate(45deg); color: #fff; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .cards-container { gap: 20px; }
+            .info-card { flex: 1 1 100%; max-width: 100%; padding: 25px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .mission-grid { grid-template-columns: 1fr; }
+            .news-glass-container { padding: 30px 20px; }
+            .btn-primary { width: 80%; }
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp { opacity: 0; will-change: transform, opacity; }
+        .animate-fadeInUp.in-view { animation: fadeInUp 0.8s ease forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        /* === HERO FOOTER STRIP === */
+        .hero-footer-strip {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 80px;
+          background: rgba(17, 17, 17, 0.4);
+          backdrop-filter: blur(15px);
+          -webkit-backdrop-filter: blur(15px);
+          border-top: 1px solid rgba(226, 232, 240, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          z-index: 10;
+          padding: 0 40px;
+        }
+
+        .strip-item {
+            color: var(--silver);
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .strip-item span {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #fff;
+            opacity: 0.6;
+        }
+
+        .shine-line {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--silver), transparent);
+            animation: moveShine 4s linear infinite;
+        }
+
+        @keyframes moveShine {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(50%); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-footer-strip { height: 60px; padding: 0px; }
+            .strip-item { font-size: 12px; }
+            .strip-item span { font-size: 18px; }
+        }
+
+        .service-item { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 40px; 
+            padding: 40px 20px; 
+            border-bottom: 1px solid rgba(255,255,255,0.08); 
+        }
+
+        .service-number { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 36px; 
+            color: var(--silver-dark); 
+            font-weight: 700; 
+            line-height: 1; 
+        }
+
+        .service-text h4 { font-size: 24px; color: #fff; margin-bottom: 15px; font-weight: 600; letter-spacing: -0.5px; }
+        .service-text p { color: #a3a3a3; font-size: 16px; line-height: 1.8; margin: 0; }
+        
+        .service-icon { 
+            opacity: 0.3; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 50px; 
+            height: 50px; 
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .service-item { 
+                gap: 20px;
+                padding: 30px 10px; 
+            }
+            .service-number { font-size: 28px; }
+            .service-text h4 { font-size: 20px; }
+            .service-text p { font-size: 14px; }
+            .service-icon { width: 40px; height: 40px; }
+        }
+
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does Darkwolf Agency provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We specialize in AI Automation, Branding, Content Creation, Copywriting, Digital Marketing, SEO Optimization, Social Media Management, and professional Web Development to scale your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you guarantee results for your clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We believe in a shared-risk partnership. By implementing data-driven strategies, deep market research, and agile execution, we ensure measurable growth, more customers, and a strong ROI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with international clients or local businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. While we maintain a strong local presence to ensure accessibility and hands-on communication, our digital services and AI infrastructures are designed to scale businesses globally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does AI automation help my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our customized AI solutions streamline your daily operations, significantly reduce manual workload, cut costs, and unlock new growth opportunities by making your processes faster and data-driven."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <main>
+     <!-- ================= HERO SECTION ================= -->
+        <section class="hero-section" aria-label="Welcome to Darkwolf Agency">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Darkwolf Agency Corporate Assets" class="hero-video" style="object-position: center;">
+            
+            <div class="hero-overlay" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(17, 17, 17, 0.9) 100%); backdrop-filter: blur(2px);"></div>
+            
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="main-title" style="font-size: clamp(35px, 6vw, 70px);">DARKWOLF AGENCY</h1>
+                <h2 class="commitment-large">More Growth</h2>
+                <h3 class="commitment-medium">More Customers</h3>
+                <span class="commitment-small" style="color: var(--silver-dark); font-weight: 500; letter-spacing: 5px; text-transform: uppercase;">Guaranteed</span>
+                
+                <div style="margin-top: 50px;">
+                    <a href="https://darkwolfagency.com/contact-us/" class="btn-primary" aria-label="Get Started with Darkwolf Agency">
+                        <span>Yes, I want That!</span>
+                        <svg viewBox="0 0 25 25" fill="currentColor">
+                            <path d="M16.8569 9.67962L8.24994 18.2866L6.83594 16.8726L15.4419 8.26562H7.85694V6.26562H18.8569V17.2656H16.8569V9.67962Z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-footer-strip">
+                <div class="shine-line"></div>
+                
+                <div class="strip-item">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    GLOBAL REACH <span>|</span>
+                </div>
+                
+                <div class="strip-item">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    GUARANTEED RESULTS <span>|</span>
+                </div>
+                
+                <div class="strip-item">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                    </svg>
+                    PREMIUM AGENCY
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= WHO WE ARE ================= -->
+        <section id="about" class="news-section">
+            <div class="news-glass-container animate-fadeInUp delay-100">
+                <span class="news-subtitle">Who We Are</span>
+                <h2 class="news-title">Strategic Partners in Major Decisions</h2>
+                <p class="news-desc">
+                    We don't just manage capital; we engineer value and industry dominance. As a multifaceted holding structure, our leadership is built on a relentless, high-discipline mindset—a true wolfpack mentality where strategic partnership and business synergy come first. From international trade to cutting-edge digital scaling through Darkwolf Agency, our mission is to optimize the growth trajectory for our corporate partners through aggressive, data-driven strategies. We turn economic challenges into lasting achievements.
+                </p>
+            </div>
+        </section>
+
+
+       <section class="services-section" style="padding-top: 40px; padding-bottom: 100px;">
+            <h3 class="section-heading animate-fadeInUp" style="margin-bottom: 60px;">
+                <span class="white">Our Core</span>
+                <span class="silver">Expertise</span>
+            </h3>
+            
+            <div class="services-container">
+                
+                <div class="service-item animate-fadeInUp delay-100">
+                    <div class="service-number">01</div>
+                    <div class="service-text">
+                        <h4>Strategic Asset Management</h4>
+                        <p>Optimizing investment portfolios to mitigate risk while driving aggressive profitability in highly competitive global markets.</p>
+                    </div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="service-item animate-fadeInUp delay-200">
+                    <div class="service-number">02</div>
+                    <div class="service-text">
+                        <h4>Global Trade & Commerce</h4>
+                        <p>Mastering supply chain management and international commercial exchanges with a focus on absolute asset security.</p>
+                    </div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="service-item animate-fadeInUp delay-300">
+                    <div class="service-number">03</div>
+                    <div class="service-text">
+                        <h4>Digital & Infrastructure Scaling</h4>
+                        <p>Developing scalable enterprise platforms and digital infrastructures with long-lasting standards, redefining modern commercial spaces.</p>
+                    </div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <path d="M9 22v-4h6v4"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="service-item animate-fadeInUp delay-100">
+                    <div class="service-number">04</div>
+                    <div class="service-text">
+                        <h4>AI & Tech Acceleration</h4>
+                        <p>Integrating Artificial Intelligence into holding company structures to optimize operations and secure a dominant position in the future economy.</p>
+                    </div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <rect x="9" y="9" width="6" height="6"></rect>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+              <h2 class="eyebrow">Meet the Next Generation of Darkwolf Digital Services</h2>
+                
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <div class="media">
+                                <button class="play-btn" aria-label="play"></button>
+                                <video playsinline muted poster="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.webm?imbypass=true" type="video/webm">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.mp4?imbypass=true" type="video/mp4">
+                                </video>
+                                <img src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg" alt="Display">
+                            </div>
+                            <div class="slide-body">
+                        <h3 class="slide-title">Luxury Design & Development</h3>
+                        <div class="slide-desc collapsed">
+                            <p>Merging modern UI/UX standards with breathtaking aesthetics. We create Dark & Gold themed websites that are not just seen, but unforgettable.</p>
+                        </div>
+                        <button class="more-btn">View Services</button>
+                    </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="media">
+                                <button class="play-btn" aria-label="play"></button>
+                                <video playsinline muted poster="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.webm?imbypass=true" type="video/webm">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.mp4?imbypass=true" type="video/mp4">
+                                </video>
+                                <img src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg" alt="Display">
+                            </div>
+                            <div class="slide-body">
+                        <h3 class="slide-title">Comprehensive AI Solutions</h3>
+                        <div class="slide-desc collapsed">
+                            <p>Harnessing the power of AI to optimize organizational structures and automate conglomerate processes. Intelligent architecture for businesses thinking about the future.</p>
+                        </div>
+                        <button class="more-btn">View Services</button>
+                    </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="media">
+                                <button class="play-btn" aria-label="play"></button>
+                                <video playsinline muted poster="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.webm?imbypass=true" type="video/webm">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.mp4?imbypass=true" type="video/mp4">
+                                </video>
+                                <img src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg" alt="Display">
+                            </div>
+                            <div class="slide-body">
+                        <h3 class="slide-title">Strategy & Business</h3>
+                        <div class="slide-desc collapsed">
+                            <p>The "Wolfpack" approach to business. We don't just build websites; we engineer growth platforms to keep you ahead in the competitive market.</p>
+                        </div>
+                        <button class="more-btn">View Services</button>
+                    </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="media">
+                                <button class="play-btn" aria-label="play"></button>
+                                <video playsinline muted poster="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.webm?imbypass=true" type="video/webm">
+                                    <source src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/videos/galaxy-s26-ultra-features-highlights-privacy-display.mp4?imbypass=true" type="video/mp4">
+                                </video>
+                                <img src="https://images.samsung.com/iran/smartphones/galaxy-s26-ultra/images/galaxy-s26-ultra-features-highlights-privacy-display-start.jpg" alt="Display">
+                            </div>
+                            <div class="slide-body">
+                        <h3 class="slide-title">Strategy & Business</h3>
+                        <div class="slide-desc collapsed">
+                            <p>The "Wolfpack" approach to business. We don't just build websites; we engineer growth platforms to keep you ahead in the competitive market.</p>
+                        </div>
+                        <button class="more-btn">View Services</button>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="pagination">
+                    <li class="active"><button aria-label="Luxury Design & Development"></button></li>
+                    <li><button aria-label="Comprehensive AI Solutions"></button></li>
+                    <li><button aria-label="Strategy & Business"></button></li>
+                    <li><button aria-label="Strategy & Business"></button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section style="padding: 80px 20px;">
+            <h2 class="section-heading animate-fadeInUp">
+                <span class="white">You're Building</span>
+                <span class="silver"> Your Business </span>
+                <span class="white">But How Do You Do It Right?</span>
+            </h2>
+            
+            <div class="cards-container">
+                <article class="info-card animate-fadeInUp in-view" onclick="selectCard(event, this)">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    </div>
+                    <h3 class="card-title">Deep Research</h3>
+                    <p class="card-text">Before any action, you must understand your target market, competitors, and real customer needs.</p>
+                </article>
+
+                <article class="info-card animate-fadeInUp delay-100 in-view" onclick="selectCard(event, this)">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="M12 2v20M2 12h20M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+                    </div>
+                    <h3 class="card-title">Strategy Design</h3>
+                    <p class="card-text">With gathered insights, define a sustainable revenue model, competitive advantages, and differentiators.</p>
+                </article>
+
+                <article class="info-card animate-fadeInUp delay-200 in-view" onclick="selectCard(event, this)">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3 class="card-title">Agile Execution</h3>
+                    <p class="card-text">Start with a Minimum Viable Product (MVP), gather feedback, and adapt quickly. Success lies in iterations.</p>
+                </article>
+            </div>
+        </section>
+
+        <section style="padding: 20px 20px 60px; text-align: center;">
+            <h2 style="font-size: clamp(20px, 3vw, 28px); color: var(--silver); margin-bottom: 20px; font-weight: 700; text-shadow: 0 0 10px rgba(226,232,240,0.3);">
+                Your Business Deserves More Than 'Good Enough'…
+            </h2>
+            <p style="font-size: clamp(16px, 2vw, 20px); color: #ccc; max-width: 850px; margin: 0 auto; line-height: 1.8;">
+                You know marketing, branding, and web development are critical. But let's face it: your plate is already full, and every task feels urgent.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 class="section-heading animate-fadeInUp">
+                    <span class="white">Our </span><span class="silver">digital services</span><span class="white"> to grow your brand</span>
+                </h2>
+                <p style="color: #a3a3a3; max-width: 600px; margin: 0 auto 30px;" class="animate-fadeInUp delay-100">
+                    Join our creative community to collaborate, innovate, and thrive together.
+                </p>
+                <a href="https://darkwolfagency.com/services/" class="btn-primary animate-fadeInUp delay-200">
+                    <span>All Services</span>
+                    <svg viewBox="0 0 25 25" fill="currentColor">
+                        <path d="M16.8569 9.67962L8.24994 18.2866L6.83594 16.8726L15.4419 8.26562H7.85694V6.26562H18.8569V17.2656H16.8569V9.67962Z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card animate-fadeInUp">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="luxury-diamond">
+                                <path d="M12 2L2 8l10 14 10-14-10-6z"/>
+                                <path d="M2 8l4 2M22 8l-4 2M12 22V10"/>
+                            </svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/ai-automation/" class="service-arrow" aria-label="Learn more about AI Automation">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">AI Automation</h3>
+                    <p class="service-desc">We help businesses harness the power of AI automation to make their operations more efficient, reduce costs, and unlock new growth.</p>
+                </article>
+
+                <article class="service-card animate-fadeInUp delay-100">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 60 60" stroke-width="1.5"><rect x="2.1" y="2.1" width="55.7" height="55.7" rx="10"/><path d="M10.7 30.1h8.6l6.4-10.8 6.4 23.6 8.6-12.8h8.6"/></svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/branding/" class="service-arrow" aria-label="Learn more about Branding">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">Branding</h3>
+                    <p class="service-desc">In a world overflowing with noise, branding is how your business cuts through. We craft bold, memorable brands.</p>
+                </article>
+
+                <article class="service-card animate-fadeInUp delay-200">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 60 60" stroke-width="1.5"><circle cx="19.3" cy="38.6" r="17.1"/><circle cx="40.7" cy="38.6" r="17.1"/><circle cx="30" cy="21.4" r="17.1"/></svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/content-creation/" class="service-arrow" aria-label="Learn more about Content Creation">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">Content Creation</h3>
+                    <p class="service-desc">In today's digital world, content is king. Whether you're aiming to engage your audience or boost brand awareness.</p>
+                </article>
+
+                <article class="service-card animate-fadeInUp">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 61 60" stroke-width="1.5"><path d="M40.7 6.4h6.5a3.6 3.6 0 013.6 3.6v42.9a3.6 3.6 0 01-3.6 3.6H12.9a3.6 3.6 0 01-3.6-3.6V10a3.6 3.6 0 013.6-3.6h6.4"/><rect x="19.3" y="2.1" width="21.4" height="10.7" rx="2.1"/><path d="M19.3 23.6h21.4M19.3 34.3h21.4M19.3 45h21.4"/></svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/copywriting/" class="service-arrow" aria-label="Learn more about Copywriting">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">Copywriting</h3>
+                    <p class="service-desc">Effective copywriting is the cornerstone of successful marketing. We specialize in writing words that sell and convert.</p>
+                </article>
+
+                <article class="service-card animate-fadeInUp delay-100">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 40 39" stroke-width="1.5"><rect x="1.6" y="2.3" width="14.3" height="14.3"/><path d="M23.7 38H38M23.7 23.8H38M23.7 30.9H38"/><path d="M38.7 16.6H23L30.9.9l7.8 15.7z"/><circle cx="8.7" cy="30.9" r="6.4"/></svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/digital-marketing/" class="service-arrow" aria-label="Learn more about Digital Marketing">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">Digital Marketing</h3>
+                    <p class="service-desc">In the digital age, effective digital marketing is crucial to grow your business. We offer a comprehensive suite of solutions.</p>
+                </article>
+
+                <article class="service-card animate-fadeInUp delay-200">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 40 39" stroke-width="1.5"><path d="M21.5 19.2c-.4.2-.9.3-1.3.3s-.9-.1-1.3-.3L2.5 11.6a1.4 1.4 0 010-2.4L18.9 1.2a2.6 2.6 0 012.6 0l16.4 8a1.4 1.4 0 010 2.4L21.5 19.2z"/><path d="M38.7 20.5L21.3 28.5a2.6 2.6 0 01-2.6 0L1.6 20.5M38.7 29.8L21.3 37.8a2.6 2.6 0 01-2.6 0L1.6 29.8"/></svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/seo-optimization/" class="service-arrow" aria-label="Learn more about SEO Optimization">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">SEO Optimization</h3>
+                    <p class="service-desc">In today's competitive digital landscape, getting your website noticed is more important than ever. Dominate search results.</p>
+                </article>
+
+                <article class="service-card animate-fadeInUp">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 40 40" stroke-width="1.5"><ellipse cx="20" cy="8.6" rx="18.6" ry="7.1"/><path d="M1.4 8.6v22.9c0 3.9 8.3 7.1 18.6 7.1s18.6-3.2 18.6-7.1V8.6"/><path d="M1.4 20c0 3.9 8.3 7.1 18.6 7.1s18.6-3.2 18.6-7.1"/></svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/social-media-management/" class="service-arrow" aria-label="Learn more about Social Media Management">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">Social Media Management</h3>
+                    <p class="service-desc">In today's world, social media is one of the most powerful tools for connecting with your audience and building brand loyalty.</p>
+                </article>
+
+                <article class="service-card animate-fadeInUp delay-100">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 61 61" stroke-width="1.5"><circle cx="30" cy="30.8" r="27.9"/><path d="M2.2 30.8h55.6M40.7 30.8c0 10.2-3.8 19.9-10.2 27.9-6.4-8-10.2-17.7-10.2-27.9 0-10.2 3.8-19.9 10.2-27.9 6.4 8 10.2 17.7 10.2 27.9z"/></svg>
+                        </div>
+                        <a href="https://darkwolfagency.com/services/web-development/" class="service-arrow" aria-label="Learn more about Web Development">
+                            <svg viewBox="0 0 35 35"><path d="M23.6 13.8L11.4 26l-2-2L21.6 11.8H10.9V9h15.6v15.6h-2.8V13.8z"/></svg>
+                        </a>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">Your website is often the first impression customers have of your business, and making sure it's functional and fast is key.</p>
+                </article>
+            </div>
+            
+            <p style="text-align: center; margin-top: 60px; font-size: 18px;" class="animate-fadeInUp delay-200">
+                Let's make something great work together. 
+                <a href="https://demo.awaikenthemes.com/artistics/contact-us/" style="color: var(--silver); font-weight: 700; text-decoration: underline; text-underline-offset: 4px;">Get Free Quote</a>
+            </p>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <h2 class="section-heading animate-fadeInUp">
+                <span class="white">OK... But </span><span class="silver">What Makes</span><span class="white"> You Different?</span>
+            </h2>
+            
+            <div class="mission-grid">
+                <article class="mission-card animate-fadeInUp">
+                    <div class="mission-img-wrap">
+                        <img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-5.webp" alt="High-quality guarantee and risk sharing" loading="lazy">
+                        <div class="mission-icon">
+                            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M38.6 30v5.7a3.6 3.6 0 01-3.6 3.6H30M30 1.4h5.7a3.6 3.6 0 013.6 3.6V10M10 1.4H4.3a3.6 3.6 0 00-3.6 3.6V10M1.4 30v5.7a3.6 3.6 0 003.6 3.6H10"/><path d="M32.9 20s-5.7 8.6-12.9 8.6S7.1 20 7.1 20s5.7-8.6 12.9-8.6S32.9 20 32.9 20z"/><circle cx="20" cy="20" r="1.4"/></svg>
+                        </div>
+                    </div>
+                    <div class="mission-content">
+                        <h3 class="mission-title">GUARANTEE</h3>
+                        <p class="mission-text">We only win if you win. That's the basis for a good partnership. You won't carry all the risk, we'll share it.</p>
+                    </div>
+                </article>
+
+                <article class="mission-card animate-fadeInUp delay-100">
+                    <div class="mission-img-wrap">
+                        <img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-1.webp" alt="Local business accessibility" loading="lazy">
+                        <div class="mission-icon">
+                            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9.3" cy="9.3" r="7.9"/><circle cx="30.7" cy="9.3" r="7.9"/><circle cx="9.3" cy="30.7" r="7.9"/><circle cx="30.7" cy="30.7" r="7.9"/></svg>
+                        </div>
+                    </div>
+                    <div class="mission-content">
+                        <h3 class="mission-title">LOCAL</h3>
+                        <p class="mission-text">We are not tucked away in some anonymous call center. We're a local company, so you'll be able to reach us when you need us.</p>
+                    </div>
+                </article>
+
+                <article class="mission-card animate-fadeInUp delay-200">
+                    <div class="mission-img-wrap">
+                        <img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-2.webp" alt="Specialization in specific industries" loading="lazy">
+                        <div class="mission-icon">
+                            <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M45.6 6.6H14.4L3 19.4l24 32.1 24-32.1L45.6 6.6z"/><path d="M28 6.6L17.3 22.8 30 53.4M32.4 6.6l10.4 16.2L30 53.4M2.2 22.8h55.6"/></svg>
+                        </div>
+                    </div>
+                    <div class="mission-content">
+                        <h3 class="mission-title">SPECIALIZATION</h3>
+                        <p class="mission-text">Jack of all trades... Master of none. Specialization works. That's why we work with industries we know.</p>
+                    </div>
+                </article>
+
+                <article class="mission-card animate-fadeInUp delay-300">
+                    <div class="mission-img-wrap">
+                        <img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-3.webp" alt="Focusing on measurable results" loading="lazy">
+                        <div class="mission-icon">
+                            <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M45.6 6.6H14.4L3 19.4l24 32.1 24-32.1L45.6 6.6z"/><path d="M28 6.6L17.3 22.8 30 53.4M32.4 6.6l10.4 16.2L30 53.4M2.2 22.8h55.6"/></svg>
+                        </div>
+                    </div>
+                    <div class="mission-content">
+                        <h3 class="mission-title">RESULT</h3>
+                        <p class="mission-text">Our first priority is to get you results. Less talk, more walk. Action speaks louder than promises.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Infinite Marquee: Partners (Right to Left) -->
+        <section class="gallery-section">
+            <h2 class="section-heading"><span class="white">Our </span><span class="silver">Partners</span></h2>
+            <div class="scroller" data-direction="left">
+                <div class="scroller__inner">
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/EUROCLEAN-PROJECT-05-scaled-1-150x150.webp" alt="EuroClean Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-150x150.webp" alt="MBO Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/farnosh-project-04-3-scaled-1-150x150.webp" alt="Farnosh Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-3-1-150x150.webp" alt="Corporate Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-2-1-150x150.webp" alt="Corporate Partner 2" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-2-2-150x150.webp" alt="Moi Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/AH-NameT-150x150.webp" alt="AH Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/EUROCLEAN-PROJECT-05-scaled-1-150x150.webp" alt="EuroClean Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-150x150.webp" alt="MBO Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/farnosh-project-04-3-scaled-1-150x150.webp" alt="Farnosh Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-3-1-150x150.webp" alt="Corporate Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-2-1-150x150.webp" alt="Corporate Partner 2" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-2-2-150x150.webp" alt="Moi Partner" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/AH-NameT-150x150.webp" alt="AH Partner" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infinite Marquee: Signature Creations (Left to Right) -->
+        <section class="gallery-section">
+            <h2 class="section-heading"><span class="white">Our </span><span class="silver">Signature</span><span class="white"> Creations</span></h2>
+            <div class="scroller" data-direction="right">
+                <div class="scroller__inner">
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/AH-NameT.webp" alt="AH Branding Creation" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/TRANSPARENT-FILE-1-scaled-1.png" alt="Darkwolf Identity" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/gold-10-scaled-1.webp" alt="Silver Wolf Logo" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-1.png" alt="Tehran Landscape" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-4-1.webp" alt="Luxury Branding" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/gold-logo-png.png" alt="Real Estate Logo" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/DARKWOLF-UNIVERSITY-PROJECT-02-scaled-1.webp" alt="University Web Design" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/ITS-TIME-PROJECT-06-scaled-1.png" alt="It's Time Campaign" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/AH-NameT.webp" alt="AH Branding Creation" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/TRANSPARENT-FILE-1-scaled-1.png" alt="Darkwolf Identity" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/gold-10-scaled-1.webp" alt="Silver Wolf Logo" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-1.png" alt="Tehran Landscape" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/image-4-1.webp" alt="Luxury Branding" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/gold-logo-png.png" alt="Real Estate Logo" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/DARKWOLF-UNIVERSITY-PROJECT-02-scaled-1.webp" alt="University Web Design" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://darkwolfagency.com/wp-content/uploads/2025/07/ITS-TIME-PROJECT-06-scaled-1.png" alt="It's Time Campaign" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--silver-dark); font-weight: 700;">TESTIMONIALS</h2>
+                <h3 class="section-heading" style="margin-top: 10px; margin-bottom: 15px;">
+                    <span class="white">Read what they say about </span><span class="silver">working with us</span>
+                </h3>
+                <p style="color: #a3a3a3; font-size: 15px;">
+                    Discover how our clients have achieved success through our innovative solutions.
+                </p>
+            </div>
+            
+            <div class="reviews-wrapper">
+                <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                <div class="elfsight-app-6792723e-996f-4a39-a4a4-1d7d5316d156" data-elfsight-app-lazy></div>
+            </div>
+        </section>
+
+        <!-- Redesigned Latest News (Glassmorphism) -->
+        <section class="news-section">
+            <div class="news-glass-container animate-fadeInUp">
+                <span class="news-subtitle">LATEST NEWS</span>
+                <h2 class="news-title">
+                    <span style="color: #fff;">Insights on digital </span><span style="color: var(--silver); text-shadow: 0 0 15px var(--silver-glow);">innovation</span>
+                    <span style="color: #fff;">and growth </span>
+                </h2>
+                <p class="news-desc">
+                    Explore the latest trends, strategies, and tools driving digital innovation and helping businesses thrive in a rapidly evolving landscape.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="#" class="btn-primary">Read More Insights</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Generated FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-heading animate-fadeInUp">
+                <span class="silver">Frequently Asked</span> <span class="white">Questions</span>
+            </h2>
+            <div class="faq-container">
+                <div class="faq-item animate-fadeInUp">
+                    <button class="faq-question">What services does Darkwolf Agency provide? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>We specialize in AI Automation, Branding, Content Creation, Copywriting, Digital Marketing, SEO Optimization, Social Media Management, and professional Web Development to scale your business.</p></div>
+                </div>
+                <div class="faq-item animate-fadeInUp delay-100">
+                    <button class="faq-question">How do you guarantee results for your clients? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>We believe in a shared-risk partnership. By implementing data-driven strategies, deep market research, and agile execution, we ensure measurable growth, more customers, and a strong ROI.</p></div>
+                </div>
+                <div class="faq-item animate-fadeInUp delay-200">
+                    <button class="faq-question">Do you work with international clients or local businesses? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Both. While we maintain a strong local presence to ensure accessibility and hands-on communication, our digital services and AI infrastructures are designed to scale businesses globally.</p></div>
+                </div>
+                <div class="faq-item animate-fadeInUp delay-300">
+                    <button class="faq-question">How does AI automation help my business? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer"><p>Our customized AI solutions streamline your daily operations, significantly reduce manual workload, cut costs, and unlock new growth opportunities by making your processes faster and data-driven.</p></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // 1. Preloader Logic
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                if(preloader) {
+                    preloader.classList.add('hidden');
+                    setTimeout(() => preloader.remove(), 600);
+                }
+            }, 500);
+        });
+
+        // 2. 3D Card Tilt Effect (Optimized for performance)
+        const cards = document.querySelectorAll('.info-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                requestAnimationFrame(() => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    const rotateX = Math.max(-10, Math.min(10, -y / 10));
+                    const rotateY = Math.max(-10, Math.min(10, x / 10));
+                    card.style.transform = `perspective(1500px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateZ(30px) scale(1.02)`;
+                });
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1500px) rotateY(0deg) rotateX(0deg) translateZ(0) scale(1)';
+            });
+        });
+
+        // 3. Intersection Observer for Scroll Animations
+        const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 4. Infinite Marquee Clone logic (Ensures no empty space)
+        const scrollers = document.querySelectorAll('.scroller');
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            scrollers.forEach(scroller => {
+                const scrollerInner = scroller.querySelector('.scroller__inner');
+                const scrollerContent = Array.from(scrollerInner.children);
+                scrollerContent.forEach(item => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+
+        // 5. FAQ Accordion Logic
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const currentItem = question.parentElement;
+                const answer = currentItem.querySelector('.faq-answer');
+                const isActive = currentItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                if (!isActive) {
+                    currentItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+        function selectCard(event, element) {
+            event.stopPropagation();
+            const isAlreadySelected = element.classList.contains('selected');
+            document.querySelectorAll('.info-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            if (!isAlreadySelected) {
+                element.classList.add('selected');
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.info-card')) {
+                document.querySelectorAll('.info-card').forEach(card => {
+                    card.classList.remove('selected');
+                });
+            }
+        });
+
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1.15, 
+            centeredSlides: true,
+            spaceBetween: 16,
+            speed: 800,
+            rtl: true,
+            grabCursor: true,
+            breakpoints: {
+                480: { slidesPerView: 1.25, spaceBetween: 20 },
+                768: { slidesPerView: 1.4, spaceBetween: 30 },
+                1024: { slidesPerView: 1.55, spaceBetween: 40 }
+            },
+            on: {
+                slideChange: function () {
+                    handleSlideFocus(this.activeIndex);
+                }
+            }
+        });
+
+        const slides = document.querySelectorAll('.swiper-slide');
+        const bullets = document.querySelectorAll('.pagination li');
+        const paginationBtns = document.querySelectorAll('.pagination button');
+        let textSlideTimer;
+        let animationFrame;
+
+        paginationBtns.forEach((btn, i) => {
+            btn.addEventListener('click', () => swiper.slideTo(i));
+        });
+
+        document.querySelectorAll('.more-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const desc = btn.previousElementSibling;
+                const isCollapsed = desc.classList.toggle('collapsed');
+                btn.textContent = isCollapsed ? 'Read more' : 'Close';
+            });
+        });
+
+        function resetAllVideos() {
+            slides.forEach(slide => {
+                const v = slide.querySelector('video');
+                const img = slide.querySelector('.media img');
+                const btn = slide.querySelector('.play-btn');
+                if (v) {
+                    v.pause();
+                    v.currentTime = 0;
+                    img?.classList.remove('hidden');
+                    btn?.classList.remove('playing');
+                }
+            });
+            paginationBtns.forEach(btn => btn.style.setProperty('--progress', '0%'));
+        }
+
+        function handleSlideFocus(activeIndex) {
+            resetAllVideos();
+            clearTimeout(textSlideTimer);
+            cancelAnimationFrame(animationFrame);
+
+            bullets.forEach((b, idx) => {
+                b.classList.toggle('active', idx === activeIndex);
+                const btn = b.querySelector('button');
+                if (idx < activeIndex) btn.style.setProperty('--progress', '100%');
+            });
+
+            const currentSlide = slides[activeIndex];
+            const video = currentSlide.querySelector('video');
+            const img = currentSlide.querySelector('.media img');
+            const playBtn = currentSlide.querySelector('.play-btn');
+            const bulletBtn = bullets[activeIndex].querySelector('button');
+
+            if (video) {
+                video.play().then(() => {
+                    img?.classList.add('hidden');
+                    playBtn?.classList.add('playing');
+                }).catch(err => console.log("Autoplay blocked:", err));
+
+                video.ontimeupdate = () => {
+                    if (!video.duration) return;
+                    const progress = (video.currentTime / video.duration) * 100;
+                    bulletBtn.style.setProperty('--progress', `${progress}%`);
+                };
+
+                video.onended = () => {
+                    if (swiper.isEnd) swiper.slideTo(0);
+                    else swiper.slideNext();
+                };
+
+            } else {
+                const duration = 6000; 
+                const startTime = Date.now();
+
+                function animateTextProgress() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min((elapsed / duration) * 100, 100);
+                    bulletBtn.style.setProperty('--progress', `${progress}%`);
+                    
+                    if (progress < 100 && swiper.activeIndex === activeIndex) {
+                        animationFrame = requestAnimationFrame(animateTextProgress);
+                    }
+                }
+                animationFrame = requestAnimationFrame(animateTextProgress);
+
+                textSlideTimer = setTimeout(() => {
+                    if (swiper.isEnd) swiper.slideTo(0);
+                    else swiper.slideNext();
+                }, duration);
+            }
+        }
+
+        document.querySelectorAll('.play-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const video = btn.nextElementSibling;
+                if (video.paused) {
+                    video.play();
+                    btn.classList.add('playing');
+                } else {
+                    video.pause();
+                    btn.classList.remove('playing');
+                }
+            });
+        });
+
+        handleSlideFocus(0);
+    </script>
+</body>
+</html>
